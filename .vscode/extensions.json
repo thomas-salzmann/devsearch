@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "github.copilot-chat",
+        "github.copilot",
+        "bracketpaircolordlw.bracket-pair-color-dlw",
+        "ms-python.black-formatter",
+        "formulahendry.auto-rename-tag"
+    ]
+}

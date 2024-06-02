@@ -9,5 +9,6 @@ __pycache__
 # Development environments
 .vscode/*
 !.vscode/settings.json
+!.vscode/extensions.json
 
 .idea/*
