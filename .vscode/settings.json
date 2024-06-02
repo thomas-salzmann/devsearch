@@ -1,14 +1,12 @@
 {
   "editor.mouseWheelZoom": true,
   "files.exclude": {
-    "**/.git": false,
+    "**/.git": false
   },
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "black-formatter.args": [
-    "--line-length",
-    "80"
-  ]
+  "black-formatter.args": ["--line-length", "80"]
 }

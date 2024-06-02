@@ -3,66 +3,66 @@ default_language_version:
   python: python3.10
 
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
-    -   id: check-added-large-files
+      - id: check-added-large-files
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-ast
+      - id: check-ast
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-builtin-literals
+      - id: check-builtin-literals
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-case-conflict
+      - id: check-case-conflict
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-docstring-first
+      - id: check-docstring-first
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-executables-have-shebangs
+      - id: check-executables-have-shebangs
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-json
+      - id: check-json
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-shebang-scripts-are-executable
+      - id: check-shebang-scripts-are-executable
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-merge-conflict
+      - id: check-merge-conflict
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-symlinks
+      - id: check-symlinks
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-toml
+      - id: check-toml
         stages: [pre-commit, pre-merge-commit]
-    -   id: check-yaml
+      - id: check-yaml
         stages: [pre-commit, pre-merge-commit]
-    -   id: debug-statements
+      - id: debug-statements
         stages: [pre-commit, pre-merge-commit]
-    -   id: destroyed-symlinks
+      - id: destroyed-symlinks
         stages: [pre-commit, pre-merge-commit]
-    -   id: detect-private-key
+      - id: detect-private-key
         stages: [pre-commit, pre-merge-commit]
-    -   id: double-quote-string-fixer
+      - id: double-quote-string-fixer
         stages: [pre-commit, pre-merge-commit]
-    -   id: end-of-file-fixer
+      - id: end-of-file-fixer
         stages: [pre-commit, pre-merge-commit]
-    -   id: fix-byte-order-marker
+      - id: fix-byte-order-marker
         stages: [pre-commit, pre-merge-commit]
-    -   id: fix-encoding-pragma
+      - id: fix-encoding-pragma
         stages: [pre-commit, pre-merge-commit]
-    -   id: forbid-new-submodules
+      - id: forbid-new-submodules
         stages: [pre-commit, pre-merge-commit]
-    -   id: forbid-submodules
+      - id: forbid-submodules
         stages: [pre-commit, pre-merge-commit]
-    -   id: mixed-line-ending
+      - id: mixed-line-ending
         stages: [pre-commit, pre-merge-commit]
-    -   id: name-tests-test
+      - id: name-tests-test
         stages: [pre-commit, pre-merge-commit]
-    -   id: sort-simple-yaml
+      - id: sort-simple-yaml
         stages: [pre-commit, pre-merge-commit]
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         stages: [pre-commit, pre-merge-commit]
--   repo: https://github.com/psf/black
+  - repo: https://github.com/psf/black
     rev: 24.4.2
     hooks:
-    -   id: black
+      - id: black
         stages: [pre-commit, pre-merge-commit]
--   repo: https://github.com/pycqa/isort
+  - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
-    -   id: isort
+      - id: isort
         stages: [pre-commit, pre-merge-commit]
