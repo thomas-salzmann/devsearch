@@ -9,6 +9,7 @@
     "shd101wyy.markdown-preview-enhanced",
     "esbenp.prettier-vscode",
     "ms-python.python",
-    "ms-python.debugpy"
+    "ms-python.debugpy",
+    "alexcvzz.vscode-sqlite"
   ]
 }
