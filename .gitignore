@@ -8,4 +8,6 @@ __pycache__
 
 # Development environments
 .vscode/*
+!.vscode/settings.json
+
 .idea/*
