@@ -1,15 +1,22 @@
-# Django
+# --- Django
 db.sqlite3
 
-# Python
+# --- Python
 __pycache__
 *.py[cod]
 *$py.class
 
-# Development environments
+# --- Development environments
 .vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
 !.vscode/extensions.json
 
 .idea/*
+
+# --- Other
+
+# Pretter code formatting tool automatically creates folder
+# node_modules/.cache/prettier/.prettier-caches when it's run by
+# a git hook.
+node_modules/
