@@ -63,9 +63,16 @@ repos:
     rev: "v4.0.0-alpha.8"
     hooks:
       - id: prettier
+        stages: [pre-commit, pre-merge-commit]
         exclude_types: [python]
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
       - id: isort
         stages: [pre-commit, pre-merge-commit]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks:
+      - id: mypy
+        stages: [pre-commit, pre-merge-commit]
+        args: []

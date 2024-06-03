@@ -7,6 +7,7 @@
     "github.copilot-chat",
     "ms-python.isort",
     "shd101wyy.markdown-preview-enhanced",
+    "ms-python.mypy-type-checker",
     "esbenp.prettier-vscode",
     "ms-python.python",
     "ms-python.debugpy",

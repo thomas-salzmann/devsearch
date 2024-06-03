@@ -14,9 +14,14 @@ __pycache__
 
 .idea/*
 
-# --- Other
+# --- Code checking & formatting tools
 
-# Pretter code formatting tool automatically creates folder
-# node_modules/.cache/prettier/.prettier-caches when it's run by
-# a git hook.
+# Prettier
+
+# Tool creates folder node_modules/.cache/prettier/.prettier-caches
+# when it's run by a git hook.
 node_modules/
+
+
+# Mypy
+.mypy_cache/
