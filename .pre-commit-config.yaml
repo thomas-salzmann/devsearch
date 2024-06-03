@@ -76,3 +76,5 @@ repos:
       - id: mypy
         stages: [pre-commit, pre-merge-commit]
         args: []
+        additional_dependencies:
+          - django-stubs
