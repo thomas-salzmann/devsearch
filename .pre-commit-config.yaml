@@ -49,6 +49,7 @@ repos:
       - id: mixed-line-ending
         stages: [pre-commit, pre-merge-commit]
       - id: name-tests-test
+        args: [--pytest-test-first]
         stages: [pre-commit, pre-merge-commit]
       - id: sort-simple-yaml
         stages: [pre-commit, pre-merge-commit]
@@ -84,7 +85,14 @@ repos:
         name: pylint
         entry: pylint
         args: [-sn]
+        types: [python]
         exclude: manage.py
         language: system
+        stages: [pre-commit, pre-merge-commit]
+      - id: pytest
+        name: pytest
+        entry: pytest
+        files: tests/test_.*.py
         types: [python]
+        language: system
         stages: [pre-commit, pre-merge-commit]

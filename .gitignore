@@ -25,3 +25,7 @@ node_modules/
 
 # Mypy
 .mypy_cache/
+
+
+# Pytest
+.pytest_cache/

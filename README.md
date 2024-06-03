@@ -38,6 +38,7 @@ The code quality of this project is ensured with various code formatting and cod
 - [`isort`](https://pycqa.github.io/isort/): Sorting of Python import statements.
 - [`mypy`](https://mypy.readthedocs.io/en/stable/): Static type code checker for Python.
 - [`pylint`](https://pypi.org/project/pylint/): Static code analysis tool for Python.
+- [`pytest`](https://docs.pytest.org/en/8.2.x/): Python testing framework (see also [`python-django`](https://pytest-django.readthedocs.io/en/latest/)).
 
 These tools, amoung other checks, are automatically applied upon each call of `git commit` by the `pre-commit` tool whose configuration file is `.pre-commit-config.yaml`. If any of them throws an error, the changes are not committed to the local repository.
 
@@ -48,5 +49,6 @@ For this project we chose to apply all of these tools with their default configu
 - `isort`: isort.cfg
 - `mypy`: mypy.ini
 - `pylint`: .pylintrc
+- `pytest`: pytest.ini
 
 ### Development Workflow
