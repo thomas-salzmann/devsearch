@@ -40,7 +40,7 @@ The code quality of this project is ensured with various code formatting and cod
 - [`pylint`](https://pypi.org/project/pylint/): Static code analysis tool for Python.
 - [`pytest`](https://docs.pytest.org/en/8.2.x/): Python testing framework (see also [`python-django`](https://pytest-django.readthedocs.io/en/latest/)).
 
-These tools, amoung other checks, are automatically applied upon each call of `git commit` by the `pre-commit` tool whose configuration file is `.pre-commit-config.yaml`. If any of them throws an error, the changes are not committed to the local repository.
+These tools, amoung other checks, are automatically applied upon each call of `git commit` or `git merge` by the `pre-commit` tool whose configuration file is `.pre-commit-config.yaml`. If any of them throws an error, the changes are not committed to the local repository.
 
 For this project we chose to apply all of these tools with their default configurations. However, specific configuration needs may arise at some point. For this case, each tool has its own configuration file that can be used to customize its behaviour:
 
