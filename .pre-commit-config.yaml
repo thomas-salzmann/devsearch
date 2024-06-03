@@ -107,3 +107,8 @@ repos:
         types: [python]
         language: system
         stages: [pre-commit, pre-merge-commit]
+      - id: cleanup
+        name: cleanup
+        entry: python -m pre_commit_hooks.cleanup
+        language: python
+        stages: [pre-commit, pre-merge-commit]
