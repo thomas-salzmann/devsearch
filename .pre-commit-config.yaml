@@ -74,7 +74,17 @@ repos:
     rev: v1.10.0
     hooks:
       - id: mypy
-        stages: [pre-commit, pre-merge-commit]
         args: []
+        stages: [pre-commit, pre-merge-commit]
         additional_dependencies:
           - django-stubs
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        args: [-sn]
+        exclude: manage.py
+        language: system
+        types: [python]
+        stages: [pre-commit, pre-merge-commit]

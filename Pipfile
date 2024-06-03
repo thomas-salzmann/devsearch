@@ -9,6 +9,7 @@ django-stubs = "*"
 isort = "*"
 mypy = "*"
 pre-commit = "*"
+pylint = "*"
 
 [packages]
 django = "*"

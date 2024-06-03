@@ -9,6 +9,7 @@
     "shd101wyy.markdown-preview-enhanced",
     "ms-python.mypy-type-checker",
     "esbenp.prettier-vscode",
+    "ms-python.pylint",
     "ms-python.python",
     "ms-python.debugpy",
     "alexcvzz.vscode-sqlite"
