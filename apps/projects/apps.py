@@ -7,4 +7,4 @@ class ProjectsConfig(AppConfig):
     """ The configuration class for the projects app. """
 
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'projects'
+    name = 'apps.projects'
