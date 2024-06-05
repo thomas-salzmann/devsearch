@@ -20,10 +20,10 @@ If you are a regular user (i.e. you simply want to use the project), go to the [
 - Make sure Python is installed on your operating system.
 - If not already the case, add the parent directory of your Python executable file to the `PATH` environment variable.
 - In the following, for Linux and Mac systems, `$PYTHON_EXECUTABLE` has the value `python3`, whereas for Windows systems it has the value `$python`.
-- Upgrade the _pip_ tool to the newest version: `$PYTHON_EXECUTABLE -m pip install --upgrade pip`
-- Install the _pipenv_ tool: `$PYTHON_EXECUTABLE -m pip install --user pipenv`
+- Upgrade the pip tool to the newest version: `$PYTHON_EXECUTABLE -m pip install --upgrade pip`
+- Install the [poetry](https://python-poetry.org/) tool: `$PYTHON_EXECUTABLE -m pip install --user poetry`
 - Open the project in VSCode.
-- Inside VSCode, open a terminal and install the project dependencies: `$PYTHON_EXECUTABLE -m pipenv install --dev`. This creates a virtual environment for the project which has all of the required Python packages installed.
+- Inside VSCode, open a terminal and install the project dependencies: `$PYTHON_EXECUTABLE -m poetry install`. This creates a virtual environment for the project which has all of the required Python packages installed.
 - Now, select the Python interpreter installed in the virtual environment as the default Python interpreter for the workspace. In order to do this, open VSCode's command pallette with `CTRL+SHIFT+p` and select `Python: Select Interpreter`. Afterwards, select the correct Python interpreter. From now on, every time you open a terminal within this workspace inside VSCode, the virtual environment is automatically activated. Also, only by setting the correct Python interpreter for the workspace launching the Django app in debugging mode works.
 - Finally, inside a terminal that has the virtual environment activated, run `pre-commit install --install-hooks --hook-type pre-commit --hook-type pre-merge-commit` to install git hooks. **It's crucial for you to install these git hooks in order to ensure code quality**. (see [Code Quality](#code-quality)).
 
@@ -43,8 +43,8 @@ If you are a regular user (i.e. you simply want to use the project), go to the [
 #### Files
 
 - `manage.py`: Django application management script.
-- `Pipfile`: Configuration file read by [pipenv](https://pipenv.pypa.io/en/latest/) tool. These are the Python installation requirements.
-- `Pipfile.lock`: Configuration file read by [pipenv](https://pipenv.pypa.io/en/latest/) tool. The exact Python package versions to install.
+- `pyproject.toml`: Configuration file read by [poetry](https://python-poetry.org/) tool. The file contains the installation requirements.
+- `poetry.lock`: Configuration file read by [poetry](https://python-poetry.org/) tool. This file contains the exact Python package versions to install.
 - `.pep8`: Configuration file read by Python code formatting tool [autopep8](https://pypi.org/project/autopep8/).
 - `.pre-commit-config.yaml`: Configuration read by [pre-commit](https://pre-commit.com/) tool.
 - `.prettierrc`: Configuration file read by code formatting tool [prettier](https://prettier.io/).

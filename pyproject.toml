@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "devsearch"
+version = "0.1.0"
+description = "The purpose of this project is to demonstrate my skills with the Python / Django technology stack. The project developed is a platform to search for developers, hence the name devsearch."
+authors = ["Thomas Salzmann <thomas.salzmann.privat@gmail.com>"]
+maintainers = ["Thomas Salzmann <thomas.salzmann.privat@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/thomas-salzmann/devsearch/"
+classifiers=[
+    "programming-language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "*"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "*"
+django-stubs = "*"
+djlint = "*"
+isort = "*"
+mypy = "*"
+pre-commit = "*"
+pylint = "*"
+pytest-django = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
