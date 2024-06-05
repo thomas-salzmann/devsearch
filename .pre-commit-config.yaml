@@ -17,6 +17,9 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
+      - id: no-commit-to-branch
+        args: ["--branch", "main"]
+        stages: [pre-commit, pre-merge-commit]
       - id: check-added-large-files
         stages: [pre-commit, pre-merge-commit]
       - id: check-ast
