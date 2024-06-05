@@ -4,6 +4,7 @@
     "ms-python.autopep8",
     "mhutchie.git-graph",
     "bracketpaircolordlw.bracket-pair-color-dlw",
+    "monosans.djlint",
     "github.copilot",
     "github.copilot-chat",
     "ms-python.isort",
