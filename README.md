@@ -86,8 +86,13 @@ To summarize, this is how your git workflow looks like as a developer on this pr
 - Create a new branch `new_branch`, switch to this branch, develop your code and commit your changes to `new_branch`.
 - When you are done with the work `new_branch`, go back to the `main` branch and pull the remote `main` branch to have the latest updates implemented by other developers on the team locally available.
 - Switch back to `new_branch` and merge the `main` branch. Resolve potential merge conflicts in `new_branch`.
+- Generally, it is recommended you pull the `main` branch regularly and merge it into `new_branch` even while still developing it.
 - Push `new_branch` to the remote repository on Github and create a pull request for remote `new_branch` to be merged into remote `main`.
 - After creating the pull request, do not commit or push any further changes to `new_branch` unless the pull request is rejected and correcting changes need to be made.
+- After the pull request is accepted, do three things
+  1.  Pull the remote `main` branch into the local `main` branch and merge the changes into the branch you currently work on.
+  2.  Delete the local `new_branch`.
+  3.  Delete the reference of remote `new_branch` in local repository by `git remote update origin --prune`.
 - For your next piece of work, switch to the `main` branch, delete local `new_branch` and create another branch `new_branch_2`.
 - Upon creating the pull request, a CI / CD pipeline is triggered (**Note: this is yet to be implemented**).
 - If it exeuctes without any errors, the pull request is automatically accepted and the remote `new_branch` is merged with the remote `main` branch.
