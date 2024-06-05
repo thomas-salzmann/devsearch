@@ -84,12 +84,15 @@ To summarize, this is how your git workflow looks like as a developer on this pr
 
 - First clone the [devsearch](https://github.com/thomas-salzmann/devsearch) repository and follow the [Installation steps](#installation).
 - Create a new branch `new_branch`, switch to this branch, develop your code and commit your changes to `new_branch`.
-- When you are done with the work `new_branch`, back to the `main` branch and pull the remote `main` branch to have the latest updates implemented by other developers on the team locally available.
+- When you are done with the work `new_branch`, go back to the `main` branch and pull the remote `main` branch to have the latest updates implemented by other developers on the team locally available.
 - Switch back to `new_branch` and merge the `main` branch. Resolve potential merge conflicts in `new_branch`.
 - Push `new_branch` to the remote repository on Github and create a pull request for remote `new_branch` to be merged into remote `main`.
-- Upon creating the pull request, a CI / CD pipeline is triggered.
+- After creating the pull request, do not commit or push any further changes to `new_branch` unless the pull request is rejected and correcting changes need to be made.
+- For your next piece of work, switch to the `main` branch, delete local `new_branch` and create another branch `new_branch_2`.
+- Upon creating the pull request, a CI / CD pipeline is triggered (**Note: this is yet to be implemented**).
 - If it exeuctes without any errors, the pull request is automatically accepted and the remote `new_branch` is merged with the remote `main` branch.
-- At this point, the cycle begins again. Create a new branch `new_branch_2`, switch to this branch, develop your code and commit your changes to `new_branch_2`.
+- If errors occur, the pull request is rejected and correcting changes need to be made.
+- After the remote branch is merged, it is deleted from the remote repository to keep the repository clean. This is Github flow best practice (read [here](https://docs.github.com/en/get-started/using-github/github-flow#delete-your-branch)).
 
 We adhere to the following naming conventions for our git branches:
 
