@@ -43,15 +43,17 @@ If you are a regular user (i.e. you simply want to use the project), go to the [
 #### Files
 
 - `manage.py`: Django application management script.
-- `pyproject.toml`: Configuration file read by [poetry](https://python-poetry.org/) tool. The file contains the installation requirements.
+- `pyproject.toml`: Project configuration file
+  - Section's `tool.poetry` and `tool.poetry.dependencies` read by [poetry](https://python-poetry.org/) tool. The sections contain the Python package installation requirements.
+  - Section `tool.autopep8` read by Python code formatting tool [autopep8](https://pypi.org/project/autopep8/).
+  - Section `tool.djlint` read by HTML Django template formatter and linter [djlint](https://www.djlint.com/).
+  - Section `tool.isort` read by Python import sorting tool [isort](https://pycqa.github.io/isort/).
+  - Sections `tool.mypy` and `tool.django-stubs` read by Python static type checker [mypy](https://mypy.readthedocs.io/en/stable/).
+  - Section `tool.pylint` read by Python linting tool [pylint](https://pypi.org/project/pylint/).
+  - Section `tool.pytest.ini_options` read by Python testing framework [pytest](https://docs.pytest.org/en/8.2.x/).
 - `poetry.lock`: Configuration file read by [poetry](https://python-poetry.org/) tool. This file contains the exact Python package versions to install.
-- `.pep8`: Configuration file read by Python code formatting tool [autopep8](https://pypi.org/project/autopep8/).
 - `.pre-commit-config.yaml`: Configuration read by [pre-commit](https://pre-commit.com/) tool.
 - `.prettierrc`: Configuration file read by code formatting tool [prettier](https://prettier.io/).
-- `isort.cfg`: Configuration file ready by Python import sorting tool [isort](https://pycqa.github.io/isort/).
-- `mypy.ini`: Configuration file read by Python static type checker [mypy](https://mypy.readthedocs.io/en/stable/).
-- `.pylintrc`: Configuration file read by Python linting tool [pylint](https://pypi.org/project/pylint/).
-- `pytest.ini`: Configuration file read by Python testing framework [pytest](https://docs.pytest.org/en/8.2.x/).
 - `.gitignore`: gitignore file.
 
 ### Code Quality
@@ -60,6 +62,7 @@ The code quality of this project is ensured with various code formatting and cod
 
 - [autopep8](https://pypi.org/project/autopep8/): Python code formatter. Adheres to [PEP 8](https://peps.python.org/pep-0008/) standard.
 - [prettier](https://prettier.io/): Code formatter. Used in this project to format all files except for Python files.
+- [djlint](https://www.djlint.com/): Code formatter and linter for HTML Django template files.
 - [isort](https://pycqa.github.io/isort/): Sorting of Python import statements.
 - [mypy](https://mypy.readthedocs.io/en/stable/): Static type code checker for Python.
 - [pylint](https://pypi.org/project/pylint/): Static code analysis tool for Python.
@@ -67,7 +70,7 @@ The code quality of this project is ensured with various code formatting and cod
 
 These tools, amoung other checks, are automatically applied as pre-commit hooks upon each call of `git commit` or `git merge` by the [pre-commit](https://pre-commit.com/) tool. The hooks take care of formatting the code, running type checks as well as running unit tests and automatically detecting and fixing some other potential issues. If any of the hooks throw an error (i.e. exit status code is not equal to 0), the changes are not committed to the local git repository.
 
-For this project we chose to apply all of the above mentioned tools with their default configurations. However, specific configuration needs may arise at some point. For this case, each tool has its own configuration file that can be used to customize its behaviour (see [Project Structure -> Files](#files)).
+For this project we chose to apply all of the above mentioned tools with their default configurations. However, specific configuration needs may arise at some point. For this case, each tool has its own configuration section in `pyproject.toml` except for the `prettier` code formatter configuration options go into `.prettierrc`, because the tool does not support `pyproject.toml` configuration at this point (see [Project Structure -> Files](#files)).
 
 ### Development Workflow
 
