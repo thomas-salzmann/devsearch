@@ -12,6 +12,7 @@
     }
   },
   "[html][django-html]": {
+    "editor.detectIndentation": false,
     "editor.defaultFormatter": "monosans.djlint"
   }
 }

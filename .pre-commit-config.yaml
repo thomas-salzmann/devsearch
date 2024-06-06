@@ -83,7 +83,8 @@ repos:
   - repo: https://github.com/djlint/djLint/
     rev: v1.34.1
     hooks:
-      - id: djlint-reformat-django
+      - id: djlint
+        args: [--reformat]
         stages: [pre-commit, pre-merge-commit]
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2

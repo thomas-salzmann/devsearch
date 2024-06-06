@@ -28,6 +28,8 @@ pytest-django = "*"
 [tool.autopep8]
 
 [tool.djlint]
+profile = "django"
+max_blank_lines = 1
 
 [tool.isort]
 
