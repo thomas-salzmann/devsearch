@@ -23,6 +23,7 @@ isort = "*"
 mypy = "*"
 pre-commit = "*"
 pylint = "*"
+pylint-django = "*"
 pytest-django = "*"
 
 [tool.autopep8]
@@ -40,6 +41,8 @@ plugins = ["mypy_django_plugin.main"]
 django_settings_module = "devsearch.settings"
 
 [tool.pylint]
+django-settings-module = "devsearch.settings"
+load-plugins = "pylint_django, pylint_django.checkers.migrations"
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "devsearch.settings"
